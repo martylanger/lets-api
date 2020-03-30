@@ -29,7 +29,3 @@ end
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
-
-gem "postgres", "~> 0.8.1"
-
-gem "ruby", "~> 0.1.0"
