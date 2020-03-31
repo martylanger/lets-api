@@ -1,6 +1,6 @@
 1. Generate/Scaffold New Resource
     - "election" resource: `bin/rails generate scaffold election is_profile:boolean has_previews:boolean noms:string voter_opts:string privacy_opts:string close_time:datetime group:string name:string description:string voting_method:string result:string`
-    - `bin/rails generate scaffold `
+    - "ballot" resource: `bin/rails generate scaffold ballot voter_name:string selections:string notes:string close_time:datetime`
 
 
 2. Check Generated Files AND Migrate
