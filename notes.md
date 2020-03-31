@@ -11,7 +11,7 @@
     - Include `except: %i[new edit]` to RESTful routes
 
 4. Generate Migration to Connect Resources
-    - `bin/rails generate migration AddUserToBooks user:references`
+    - `bin/rails generate migration AddUserToElections user:references`
 
 5. Check Migration File AND Migrate
     - `bin/rails db:migrate`
