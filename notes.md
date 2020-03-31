@@ -14,6 +14,7 @@
 4. Generate Migration to Connect Resources
     - `bin/rails generate migration AddUserToElections user:references`
     - `bin/rails generate migration AddElectionToBallots election:references`
+    - `bin/rails generate migration AddElectionToChoices election:references`
 
 5. Check Migration File AND Migrate
     - `bin/rails db:migrate`
