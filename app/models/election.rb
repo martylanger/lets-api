@@ -1,2 +1,3 @@
 class Election < ApplicationRecord
+  belongs_to :user
 end
