@@ -1,4 +1,4 @@
-class ChoicesController < ApplicationController
+class ChoicesController < OpenReadController
   before_action :set_choice, only: [:show, :update, :destroy]
 
   # GET /choices
