@@ -2,6 +2,9 @@
 
 Rails.application.routes.draw do
   # RESTful routes
+  resources :elections, except: %i[new edit]
+  resources :ballots, except: %i[new edit]
+  resources :choices, except: %i[new edit]
   resources :examples, except: %i[new edit]
 
   # Custom routes

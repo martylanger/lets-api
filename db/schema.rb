@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 2020_03_31_162908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ballots", force: :cascade do |t|
+    t.string "voter_name"
+    t.string "selections", null: false
+    t.string "notes"
+    t.datetime "expiration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "election_id"
+    t.index ["election_id"], name: "index_ballots_on_election_id"
+  end
+
+  create_table "choices", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "election_id"
+    t.index ["election_id"], name: "index_choices_on_election_id"
+  end
+
+  create_table "elections", force: :cascade do |t|
+    t.boolean "is_profile"
+    t.boolean "has_previews"
+    t.string "noms"
+    t.string "voter_opts"
+    t.string "privacy_opts"
+    t.datetime "close_time"
+    t.string "group"
+    t.string "name"
+    t.string "description"
+    t.string "voting_method"
+    t.string "result"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_elections_on_user_id"
+  end
 
   create_table "examples", force: :cascade do |t|
     t.text "text", null: false
@@ -33,5 +72,8 @@ ActiveRecord::Schema.define(version: 2) do
     t.index ["token"], name: "index_users_on_token", unique: true
   end
 
+  add_foreign_key "ballots", "elections"
+  add_foreign_key "choices", "elections"
+  add_foreign_key "elections", "users"
   add_foreign_key "examples", "users"
 end
