@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :ballots
   # RESTful routes
   resources :elections, except: %i[new edit]
+  resources :ballots, except: %i[new edit]
   resources :examples, except: %i[new edit]
 
   # Custom routes
