@@ -1,4 +1,4 @@
-class BallotsController < OpenReadController
+class BallotsController < ApplicationController
   before_action :set_ballot, only: [:show, :update, :destroy]
 
   # GET /ballots
@@ -25,18 +25,18 @@ class BallotsController < OpenReadController
   end
 
   # PATCH/PUT /ballots/1
-  def update
-    if @ballot.update(ballot_params)
-      render json: @ballot
-    else
-      render json: @ballot.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @ballot.update(ballot_params)
+  #     render json: @ballot
+  #   else
+  #     render json: @ballot.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /ballots/1
-  def destroy
-    @ballot.destroy
-  end
+  # def destroy
+  #   @ballot.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
