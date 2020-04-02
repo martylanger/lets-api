@@ -1,9 +1,9 @@
-class ElectionsController < ProtectedController
+class ElectionsController < OpenReadController
   before_action :set_election, only: [:show, :update, :destroy]
 
   # GET /elections
   def index
-    @elections = current_user.elections.all
+    @elections = Election.all
 
     render json: @elections
   end
@@ -41,7 +41,7 @@ class ElectionsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_election
-      @election = current_user.elections.find(params[:id])
+      @election = Election.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
