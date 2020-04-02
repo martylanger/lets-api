@@ -46,6 +46,6 @@ class BallotsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def ballot_params
-      params.require(:ballot).permit(:voter_name, :selections, :notes, :expiration)
+      params.require(:ballot).permit(:voter_name, :selections, :notes, :expiration, :election_id)
     end
 end
