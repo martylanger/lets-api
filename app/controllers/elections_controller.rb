@@ -46,6 +46,6 @@ class ElectionsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def election_params
-      params.require(:election).permit(:is_profile, :has_previews, :noms, :voter_opts, :privacy_opts, :close_time, :group, :name, :description, :voting_method, :result)
+      params.require(:election).permit(:is_profile, :has_previews, :noms_opts, :voter_opts, :privacy_opts, :close_time, :group, :name, :description, :voting_method, :result)
     end
 end

@@ -1,5 +1,5 @@
 1. Generate/Scaffold New Resource
-    - "election" resource: `bin/rails generate scaffold election is_profile:boolean has_previews:boolean noms:string voter_opts:string privacy_opts:string close_time:datetime group:string name:string description:string voting_method:string result:string`
+    - "election" resource: `bin/rails generate scaffold election is_profile:boolean has_previews:boolean noms_opts:string voter_opts:string privacy_opts:string close_time:datetime group:string name:string description:string voting_method:string result:string`
     - "ballot" resource: `bin/rails generate scaffold ballot voter_name:string selections:string notes:string close_time:datetime`
     - "choice" resource: `bin/rails generate scaffold choice title:string description:string link:string`
 
