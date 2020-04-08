@@ -1,4 +1,4 @@
-class BallotsController < OpenReadController
+class BallotsController < ApplicationController
   before_action :set_ballot, only: [:show, :update, :destroy]
 
   # GET /ballots
