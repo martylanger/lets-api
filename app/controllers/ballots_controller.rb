@@ -1,4 +1,4 @@
-class BallotsController < ApplicationController
+class BallotsController < OpenReadController
   before_action :set_ballot, only: [:show, :update, :destroy]
 
   # GET /ballots
@@ -15,7 +15,7 @@ class BallotsController < ApplicationController
 
   # POST /ballots
   def create
-    @ballot = Ballot.new(ballot_params)
+    @ballot = current_user.ballots.build(ballot_params)
 
     if @ballot.save
       render json: @ballot, status: :created, location: @ballot

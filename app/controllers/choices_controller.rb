@@ -1,4 +1,4 @@
-class ChoicesController < ApplicationController
+class ChoicesController < OpenReadController
   before_action :set_choice, only: [:show, :update, :destroy]
 
   # GET /choices
@@ -15,7 +15,7 @@ class ChoicesController < ApplicationController
 
   # POST /choices
   def create
-    @choice = Choice.new(choice_params)
+    @choice = current_user.choices.build(choice_params)
 
     if @choice.save
       render json: @choice, status: :created, location: @choice
