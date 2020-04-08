@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_03_31_162908) do
     t.string "privacy_opts"
     t.datetime "close_time"
     t.string "group"
-    t.string "name"
+    t.string "name", null: false
     t.string "description"
     t.string "voting_method"
     t.string "result"
