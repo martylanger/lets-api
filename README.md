@@ -20,6 +20,41 @@ Users will also be able to save contacts, groups of contacts, and sets of electi
 - [Let's API Repo](https://github.com/martylanger/lets-api)
 - [Deployed API](https://letsapi.herokuapp.com)
 
+## Routes
+
+#### Authentication
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| DELETE | `/sign-out`            | `users#signout`   |
+
+#### Elections
+| Verb   | URI Pattern       | Controller#Action   |
+|--------|-------------------|---------------------|
+| GET    | `/elections`      | `elections#index`   |
+| GET    | `/elections/:id`  | `elections#show`    |
+| POST   | `/elections`      | `elections#create`  |
+| PATCH  | `/elections/:id`  | `elections#update`  |
+| DELETE | `/elections/:id`  | `elections#destroy` |
+
+#### Choices
+| Verb   | URI Pattern     | Controller#Action |
+|--------|-----------------|-------------------|
+| GET    | `/choices`      | `choices#index`   |
+| GET    | `/choices/:id`  | `choices#show`    |
+| POST   | `/choices`      | `choices#create`  |
+
+#### Ballots
+| Verb   | URI Pattern     | Controller#Action |
+|--------|-----------------|-------------------|
+| GET    | `/ballots`      | `ballots#index`   |
+| GET    | `/ballots/:id`  | `ballots#show`    |
+| POST   | `/ballots`      | `ballots#create`  |
+
+
+
 ## Planning Story
 
 In a previous project, I'd built an app for users to create an election object, but without the capability to actually have nominations or voting. That project had only a single one-to-many relationship in the back-end. When I began work on this project, I initially thought that I would be able to build on the earlier project and race towards a fully functional voting app, despite starting from scratch with React.js and a more complex database structure.
@@ -40,7 +75,8 @@ By the end of the four days, the back-end had consumed more than half of my time
 
 As described above, the ownership structure for ballots and choices is still a work in progress.
 
-Later on in development I intend to add the capability for users to keep contacts and groups of contacts.
+Later on in development I intend to add the capability for users to keep contacts and groups of contacts, as well as to own their ballots/votes.
+
 
 ## ERD
 
