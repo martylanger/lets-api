@@ -1,13 +1,13 @@
 # Let's API: API supporting the Let's web app for group decision-making
 
 Let's is a web app for group decision-making using alternative voting methods, such as approval/disapproval and instant-runoff voting.
-The Let's API accepts, stores, and communicates user and election data.
+The Let's API accepts, stores and communicates user, election, choices and ballots data.
 
 Users of Let's will be able to create, open, and close an election and choose from a plethora of options:
 - Which voting method
 - How and when the candidates are determined
-- How to share with voters and verify ballots
-- Whether ballots are secret, open, or visible anonymously
+- How to share elections with voters and verify ballots
+- Whether ballots are secret, open, or visible but anonymized
 - To whom the results are visible
 - When to open and close the voting
 
@@ -20,15 +20,18 @@ Users will also be able to save contacts, groups of contacts, and sets of electi
 - [Let's API Repo](https://github.com/martylanger/lets-api)
 - [Deployed API](https://letsapi.herokuapp.com)
 
+## Dependencies
+Install all dependencies with `bundle install`.
+
 ## Routes
 
 #### Authentication
-| Verb   | URI Pattern            | Controller#Action |
-|--------|------------------------|-------------------|
-| POST   | `/sign-up`             | `users#signup`    |
-| POST   | `/sign-in`             | `users#signin`    |
-| PATCH  | `/change-password`     | `users#changepw`  |
-| DELETE | `/sign-out`            | `users#signout`   |
+| Verb   | URI Pattern        | Controller#Action |
+|--------|--------------------|-------------------|
+| POST   | `/sign-up`         | `users#signup`    |
+| POST   | `/sign-in`         | `users#signin`    |
+| PATCH  | `/change-password` | `users#changepw`  |
+| DELETE | `/sign-out`        | `users#signout`   |
 
 #### Elections
 | Verb   | URI Pattern       | Controller#Action   |
@@ -74,8 +77,9 @@ By the end of the four days, the back-end had consumed more than half of my time
 ## Unsolved Problems
 
 As described above, the ownership structure for ballots and choices is still a work in progress.
+The details have yet to be worked out, but the voting and nomination processes ought to be intuitive and sufficiently secure.
 
-Later on in development I intend to add the capability for users to keep contacts and groups of contacts, as well as to own their ballots/votes.
+Later on in development I intend to add capabilities for users to keep contacts and groups of contacts, as well as to own their ballots/votes.
 
 
 ## ERD
