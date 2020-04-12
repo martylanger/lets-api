@@ -39,6 +39,7 @@ By the end of the four days, the back-end had consumed more than half of my time
 ## Unsolved Problems
 
 As described above, the ownership structure for ballots and choices is still a work in progress.
+
 Later on in development I intend to add the capability for users to keep contacts and groups of contacts.
 
 ## ERD
