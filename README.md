@@ -42,9 +42,6 @@ As described above, the ownership structure for ballots and choices is still a w
 Later on in development I intend to add the capability for users to keep contacts and groups of contacts.
 
 ## ERD
-https://imgur.com/a/gc4l27U
-![alt text](https://imgur.com/a/gc4l27U "imgur address bar")
+
 https://i.imgur.com/L4Ft0VO.png
 ![copy image address](https://i.imgur.com/L4Ft0VO.png "copy image address")
-https://imgur.com/L4Ft0VO
-![copy link](https://imgur.com/L4Ft0VO "copy link")
