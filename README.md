@@ -45,3 +45,4 @@ Later on in development I intend to add the capability for users to keep contact
 ## ERD
 
 ![Let's ERD](https://i.imgur.com/L4Ft0VO.png "Let's ERD")
+https://i.imgur.com/L4Ft0VO
