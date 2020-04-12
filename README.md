@@ -43,5 +43,4 @@ Later on in development I intend to add the capability for users to keep contact
 
 ## ERD
 
-https://i.imgur.com/L4Ft0VO.png
-![copy image address](https://i.imgur.com/L4Ft0VO.png "copy image address")
+![Let's ERD](https://i.imgur.com/L4Ft0VO.png "Let's ERD")
