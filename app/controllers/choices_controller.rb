@@ -33,10 +33,10 @@ class ChoicesController < ApplicationController
   #   end
   # end
 
-  # # DELETE /choices/1
-  # def destroy
-  #   @choice.destroy
-  # end
+  # DELETE /choices/1
+  def destroy
+    @choice.destroy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
